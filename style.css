@@ -1,0 +1,216 @@
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/*
+2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+3. Allow percentage-based heights in the application
+*/
+html, body {
+    height: 100%;
+}
+
+/*
+Typographic tweaks!
+4. Add accessible line-height
+5. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+
+/*
+8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+9. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+:root {
+    --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+    --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --Soft-Blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --White: hsl(0, 0%, 100%)
+}
+
+body {
+    font-size: 1.125rem;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--very-dark-blue-main-bg);
+    line-height: 26px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 350px;
+    height: 596px;
+    background-color: var(--very-dark-blue-card-bg);
+    border-radius: 15px;
+    box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.10);
+}
+
+.content {
+    padding: 24px;
+}
+  
+.pricing, .eth-value, .deadline, footer {
+    display: flex;
+
+}
+
+
+.pricing {
+    /* margin-bottom: 24px; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.eth-value, .deadline {
+    align-items: center;
+    gap: 8px;
+}
+
+main p, .deadline p, footer p {
+    color: var(--Soft-Blue);
+}
+
+main p {
+    margin: 16px 0 24px 0;
+}
+
+.eth-value img{
+    width: 11px;
+    height: 18px;
+}
+
+.deadline img {
+    width: 16px;
+    height: 16px;
+}
+
+.deadline p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.eth-value p {
+    color: var(--Cyan);
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    
+}
+
+h1, .name {
+    color: var(--White);
+}
+
+h1:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.name:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 24px;
+}
+
+header {
+    position: relative;
+}
+
+header img {
+    border-radius: 8px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    background: var(--Cyan);
+    border-radius: 8px;
+}
+
+header:hover .overlay {
+    opacity: 0.503;
+}
+
+header:hover .overlay img {
+    opacity: 1;
+    width: 48px; 
+    height: 48px;
+    position: absolute;
+    top: 42%;
+    left: 43%;
+}
+
+.line {
+    height: 1px;
+    background: var(--very-dark-blue-line);
+}
+
+footer {
+    margin-top: 16px;
+    align-items: center;
+    gap: 16px;
+}
+
+footer img {
+    width: 33px;
+    height: 33px;
+    border: 2px solid var(--White);
+    border-radius: 50%;
+}
+
+
+
+
+  
